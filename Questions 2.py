@@ -1,4 +1,5 @@
-# This is the first version of the questions
+# This is the second version of the Questions component
+
 def questions():
 
     score = 0
@@ -171,5 +172,3 @@ def questions():
 
 # Main routine
 questions() == input("Are you ready to play: ")
-
-
