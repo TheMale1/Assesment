@@ -1,4 +1,4 @@
-#This is the final version of the Assement
+# This is the final version of the Assement
 
 def get_name():  # This function will get the players name
     name = str(input("What is your name: "))
@@ -14,7 +14,7 @@ def get_age():  # This function will get the players age
         return get_age()
 
 
-def formatter(symbol, text):  # This will border the introduction
+def formatter(symbol, text):  # This will border important lines
     sides = symbol * 3
     formatted_text = f"{sides} {text} {sides}"
     top_bottom = symbol * len(formatted_text)
@@ -37,7 +37,8 @@ def yes_no(question_text):
             print()
             print(formatter("-","This is the Mamae Roro quiz.\n"
                   "You will have to answer 10 questions about Te Reo Maori.\n"
-                  "Please try to avoid decimals and/or answers that are not words."))
+                  "Please try to avoid decimals and/or answers that are not words. \n"
+                                "Answer Yes/No questions with either Yes or No \n"))
             print()
             break
 
@@ -58,33 +59,26 @@ def questions():
 
 
         while answer.lower() != "c":
-            print("Wrong answer")
-            answer = input("Question 1: How do you say hello to one person? \n"
-                           "a. Kia ora \n"
-                           "b. tena koe \n"
-                           "c. Tena kotou \n")
+            print(formatter("!", "Wrong answer"))
+            break  # This will break the loop if there is a wrong answer
+
 
         else:
-            score += 1
-            print("Correct")
+            score += 1  # At the end of the quiz your score will be printed
+            print(formatter("+", "Correct"))
 
         answer = input("Question 2: How do you say water in Te Reo? \n"
                        "a. wai \n"
                        "b. tokena \n"
                        "c. rima \n")
         while answer.lower() != "a":
-            print("Wrong answer")
-            answer = input("Question 2: How do you say water in Te Reo? \n"
-                       "a. wai \n"
-                       "b. tokena \n"
-                       "c. rima \n")
-
-
+            print(formatter("!", "Wrong answer"))
+            break
 
 
         else:
             score += 1
-            print("Correct")
+            print(formatter("+", "Correct"))
 
 
         answer = input("Question 3: How do say 7 in Te Reo? \n"
@@ -92,15 +86,13 @@ def questions():
                        "b. ono \n"
                        "c. whitu \n")
         while answer.lower() != "c":
-            print("Wrong answer")
-            answer = input("Question 3: How do say 7 in Te Reo? \n"
-                       "a. tena kotou \n"
-                       "b. ono \n"
-                       "c. whitu \n")
+            print(formatter("!", "Wrong answer"))
+            break
+
 
         else:
             score += 1
-            print("Correct")
+            print(formatter("+", "Correct"))
 
 
         answer = input("Question 4: How do say hello to everyone in Te Reo? \n"
@@ -108,16 +100,14 @@ def questions():
                        "b. kia ora kotou \n"
                        "c. tena koe \n")
         while answer.lower() != "b":
-            print("Wrong answer")
-            answer = input("Question 4: How do say hello to everyone in Te Reo? \n"
-                       "a. tena kotou \n"
-                       "b. kia ora kotou \n"
-                       "c. tena koe \n")
+            print(formatter("!", "Wrong answer"))
+            break
+
 
 
         else:
             score += 1
-            print("Correct")
+            print(formatter("+", "Correct"))
 
 
         answer = input("Question 5: What does 'Ki te pehea a koe' mean?' \n"
@@ -125,16 +115,14 @@ def questions():
                        "b. Where are you \n"
                        "c. What are you \n")
         while answer.lower() != "a":
-            print("Wrong answer")
-            answer = input("Question 5: What does 'Ki te pehea a koe' mean?' \n"
-                       "a. How are you \n"
-                       "b. Where are you \n"
-                       "c. What are you \n")
+            print(formatter("!", "Wrong answer"))
+            break
+
 
 
         else:
             score += 1
-            print("Correct")
+            print(formatter("+", "Correct"))
 
 
         answer = input("Question 6: How do you say 4 in Te Reo? \n"
@@ -142,16 +130,14 @@ def questions():
                        "b. Wha \n"
                        "c. tahi \n")
         while answer.lower() != "b":
-            print("Wrong answer")
-            answer = input("Question 6: How do you say 4 in Te Reo? \n"
-                       "a. waru \n"
-                       "b. Wha \n"
-                       "c. tahi \n")
+            print(formatter("!", "Wrong answer"))
+            break
+
 
 
         else:
             score += 1
-            print("Correct")
+            print(formatter("+", "Correct"))
 
 
         answer = input("Question 7: What are maori boats called? \n"
@@ -159,31 +145,28 @@ def questions():
                        "b. Wiri \n"
                        "c. Rima \n")
         while answer.lower() != "a":
-            print("Wrong answer")
-            answer = input("Question 7: What are maori boats called? \n"
-                       "a. Waka \n"
-                       "b. Wiri \n"
-                       "c. Rima \n")
+            print(formatter("!", "Wrong answer"))
+            break
+
 
 
         else:
             score += 1
-            print("Correct")
+            print(formatter("+", "Correct"))
 
 
         answer = input("Question 8: Did the Maori have tribes, or where they united? \n"
                        "a. Tribes \n"
                        "b. United people \n ")
         while answer.lower() != "a":
-            print("Wrong answer")
-            answer = input("Question 8: Did the Maori have tribes, or where they united? \n"
-                       "a. Tribes \n"
-                       "b. United people \n ")
+            print(formatter("!", "Wrong answer"))
+            break
+
 
 
         else:
             score += 1
-            print("Correct")
+            print(formatter("+", "Correct"))
 
 
         answer = input("Question 9: What is Wednesday in Te Reo? \n"
@@ -191,39 +174,39 @@ def questions():
                        "b. Rahina \n"
                        "c. Raapa \n")
         while answer.lower() != "c":
-            print("Wrong answer")
-            answer = input("Question 9: What is Wednesday in Te Reo? \n"
-                       "a. Ratu \n"
-                       "b. Rahina \n"
-                       "c. Raapa \n")
+            print(formatter("!", "Wrong answer"))
+            break
+
 
 
         else:
             score += 1
-            print("Correct")
+            print(formatter("+", "Correct"))
 
 
             answer = input("Question 10: How do you say 'Luke is cool' in Te Reo? \n"
                            "a. He pai a Luke \n")
             while answer.lower() != "a":
-                print("Wrong answer")
-                answer = input("Question 10: How do you say 'Luke is cool' in Te Reo? \n"
-                           "a. He pai a Luke \n")
+                print(formatter("!", "Wrong answer"))
+                break
+
 
 
             else:
                 score += 1
-                print("Correct")
+                print(formatter("+", "Correct"))
+
+    return score
 
 # Main routine
 name = get_name()
 age = get_age()
 print(formatter("-", f"Kia ora {name}. Welcome to Mamae Roro.\n"
-      f"Since you are {age} years old you will probably find this easy"))
+      f"Since you are {age} years old you will probably find this easy"))  # This line calls both name and age
 
-yes_no("Have you played this quiz before: ")
-questions() == input("Are you ready to begin: ")
-
+yes_no("Have you played this quiz before: ")  # This line will begin the questions
+score = questions()
+print(formatter("*", f"{score}/10"))  # Your score will be printed here
 
 
 

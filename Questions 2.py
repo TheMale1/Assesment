@@ -13,10 +13,8 @@ def questions():
 
         while answer.lower() != "c":
             print("Wrong answer")
-            answer = input("Question 1: How do you say hello to one person? \n"
-                           "a. Kia ora \n"
-                           "b. tena koe \n"
-                           "c. Tena kotou \n")
+            break
+
 
         else:
             score += 1
@@ -28,10 +26,8 @@ def questions():
                        "c. rima \n")
         while answer.lower() != "a":
             print("Wrong answer")
-            answer = input("Question 2: How do you say water in Te Reo? \n"
-                       "a. wai \n"
-                       "b. tokena \n"
-                       "c. rima \n")
+            break
+
 
 
 
@@ -47,10 +43,8 @@ def questions():
                        "c. whitu \n")
         while answer.lower() != "c":
             print("Wrong answer")
-            answer = input("Question 3: How do say 7 in Te Reo? \n"
-                       "a. tena kotou \n"
-                       "b. ono \n"
-                       "c. whitu \n")
+            break
+
 
         else:
             score += 1
@@ -63,10 +57,8 @@ def questions():
                        "c. tena koe \n")
         while answer.lower() != "b":
             print("Wrong answer")
-            answer = input("Question 4: How do say hello to everyone in Te Reo? \n"
-                       "a. tena kotou \n"
-                       "b. kia ora kotou \n"
-                       "c. tena koe \n")
+            break
+
 
 
         else:
@@ -80,10 +72,8 @@ def questions():
                        "c. What are you \n")
         while answer.lower() != "a":
             print("Wrong answer")
-            answer = input("Question 5: What does 'Ki te pehea a koe' mean?' \n"
-                       "a. How are you \n"
-                       "b. Where are you \n"
-                       "c. What are you \n")
+            break
+
 
 
         else:
@@ -97,10 +87,8 @@ def questions():
                        "c. tahi \n")
         while answer.lower() != "b":
             print("Wrong answer")
-            answer = input("Question 6: How do you say 4 in Te Reo? \n"
-                       "a. waru \n"
-                       "b. Wha \n"
-                       "c. tahi \n")
+            break
+
 
 
         else:
@@ -114,10 +102,8 @@ def questions():
                        "c. Rima \n")
         while answer.lower() != "a":
             print("Wrong answer")
-            answer = input("Question 7: What are maori boats called? \n"
-                       "a. Waka \n"
-                       "b. Wiri \n"
-                       "c. Rima \n")
+            break
+
 
 
         else:
@@ -130,9 +116,8 @@ def questions():
                        "b. United people \n ")
         while answer.lower() != "a":
             print("Wrong answer")
-            answer = input("Question 8: Did the Maori have tribes, or where they united? \n"
-                       "a. Tribes \n"
-                       "b. United people \n ")
+            break
+
 
 
         else:
@@ -146,10 +131,8 @@ def questions():
                        "c. Raapa \n")
         while answer.lower() != "c":
             print("Wrong answer")
-            answer = input("Question 9: What is Wednesday in Te Reo? \n"
-                       "a. Ratu \n"
-                       "b. Rahina \n"
-                       "c. Raapa \n")
+            break
+
 
 
         else:
@@ -161,8 +144,8 @@ def questions():
                            "a. He pai a Luke \n")
             while answer.lower() != "a":
                 print("Wrong answer")
-                answer = input("Question 10: How do you say 'Luke is cool' in Te Reo? \n"
-                           "a. He pai a Luke \n")
+                break
+
 
 
             else:
