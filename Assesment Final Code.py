@@ -1,4 +1,4 @@
-# This is the final version of the Assement
+# This is the final version of the Assessment
 
 def get_name():  # This function will get the players name
     name = str(input("What is your name: "))
@@ -37,8 +37,8 @@ def yes_no(question_text):
             print()
             print(formatter("-","This is the Mamae Roro quiz.\n"
                   "You will have to answer 10 questions about Te Reo Maori.\n"
-                  "Please try to avoid decimals and/or answers that are not words. \n"
-                                "Answer Yes/No questions with either Yes or No \n"))
+                  "Please try to answer questions with either A, B, or C. \n"
+                                "Answer Yes/No questions with either Yes or No. \n"))
             print()
             break
 
@@ -47,21 +47,19 @@ def yes_no(question_text):
             print("Invalid answer. Please enter yes/no")
 
 
-def questions():
+def questions():   # These are the questions the user will be asked
 
     score = 0
     answer = input("Are you ready to play: ")
-    if answer.lower() == "yes":
+    if answer.lower() == "yes" or answer == "y":
         answer = input("Question 1: How do you say hello to one person \n"
                            "a. Kia ora \n"
                            "b. tena koe \n"
                            "c. Tena kotou \n")
 
-
         while answer.lower() != "c":
             print(formatter("!", "Wrong answer"))
             break  # This will break the loop if there is a wrong answer
-
 
         else:
             score += 1  # At the end of the quiz your score will be printed
@@ -75,11 +73,9 @@ def questions():
             print(formatter("!", "Wrong answer"))
             break
 
-
         else:
             score += 1
             print(formatter("+", "Correct"))
-
 
         answer = input("Question 3: How do say 7 in Te Reo? \n"
                        "a. tena kotou \n"
@@ -89,11 +85,9 @@ def questions():
             print(formatter("!", "Wrong answer"))
             break
 
-
         else:
             score += 1
             print(formatter("+", "Correct"))
-
 
         answer = input("Question 4: How do say hello to everyone in Te Reo? \n"
                        "a. tena kotou \n"
@@ -103,12 +97,9 @@ def questions():
             print(formatter("!", "Wrong answer"))
             break
 
-
-
         else:
             score += 1
             print(formatter("+", "Correct"))
-
 
         answer = input("Question 5: What does 'Ki te pehea a koe' mean?' \n"
                        "a. How are you \n"
@@ -118,12 +109,9 @@ def questions():
             print(formatter("!", "Wrong answer"))
             break
 
-
-
         else:
             score += 1
             print(formatter("+", "Correct"))
-
 
         answer = input("Question 6: How do you say 4 in Te Reo? \n"
                        "a. waru \n"
@@ -133,12 +121,9 @@ def questions():
             print(formatter("!", "Wrong answer"))
             break
 
-
-
         else:
             score += 1
             print(formatter("+", "Correct"))
-
 
         answer = input("Question 7: What are maori boats called? \n"
                        "a. Waka \n"
@@ -148,12 +133,9 @@ def questions():
             print(formatter("!", "Wrong answer"))
             break
 
-
-
         else:
             score += 1
             print(formatter("+", "Correct"))
-
 
         answer = input("Question 8: Did the Maori have tribes, or where they united? \n"
                        "a. Tribes \n"
@@ -162,12 +144,9 @@ def questions():
             print(formatter("!", "Wrong answer"))
             break
 
-
-
         else:
             score += 1
             print(formatter("+", "Correct"))
-
 
         answer = input("Question 9: What is Wednesday in Te Reo? \n"
                        "a. Ratu \n"
@@ -177,26 +156,22 @@ def questions():
             print(formatter("!", "Wrong answer"))
             break
 
+        else:
+            score += 1
+            print(formatter("+", "Correct"))
 
+        answer = input("Question 10: How do you say 'Luke is cool' in Te Reo? \n"
+                           "a. He pai a Luke \n")    # I added this, so they have to say I'm cool
+        while answer.lower() != "a":
+            print(formatter("!", "Wrong answer"))
+            break
 
         else:
             score += 1
             print(formatter("+", "Correct"))
 
-
-            answer = input("Question 10: How do you say 'Luke is cool' in Te Reo? \n"
-                           "a. He pai a Luke \n")
-            while answer.lower() != "a":
-                print(formatter("!", "Wrong answer"))
-                break
-
-
-
-            else:
-                score += 1
-                print(formatter("+", "Correct"))
-
     return score
+
 
 # Main routine
 name = get_name()
@@ -206,9 +181,7 @@ print(formatter("-", f"Kia ora {name}. Welcome to Mamae Roro.\n"
 
 yes_no("Have you played this quiz before: ")  # This line will begin the questions
 score = questions()
-print(formatter("*", f"{score}/10"))  # Your score will be printed here
-
-
-
-
-
+print(f"{score}/10")  # Your score will be printed here
+print(formatter("-", f"Thank you for playing the Mamae Roro Quiz {name}. \n"
+                     "It has been a pleasure having you. \n"
+                     "Goodbye. "))
