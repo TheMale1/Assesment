@@ -26,16 +26,16 @@ def yes_no(question_text):
 
         # Ask the user if they have played the game before
          answer = input(question_text).lower()
-        # If they say yes, output 'Program continues'
+        # If they say yes, start questions
          if answer == "yes" or answer == "y":
             answer = "Yes"
             break
 
-        # If no, output 'display instructions'
+        # If no, displays instructions
          elif answer == "no" or answer == "n":
             answer = "No"
             print()
-            print(formatter("-","This is the Mamae Roro quiz.\n"
+            print(formatter("-","This is the Mamae Roro quiz.\n" # These are the instructions
                   "You will have to answer 10 questions about Te Reo Maori.\n"
                   "Please try to answer questions with either A, B, or C. \n"
                                 "Answer Yes/No questions with either Yes or No. \n"))
@@ -170,7 +170,7 @@ def questions():   # These are the questions the user will be asked
             score += 1
             print(formatter("+", "Correct"))
 
-    return score
+    return score  # This will print their score /10 at end
 
 
 # Main routine
